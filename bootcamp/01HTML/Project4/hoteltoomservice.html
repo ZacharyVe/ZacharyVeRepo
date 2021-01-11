@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Room Service</title>
+</head>
+<style>
+     p.solid {border-style: solid;}
+</style>
+<body>
+    <h1>Hotel Room Service</h1>
+    <h2>Welcome to our hotel! We hope you enjoy your stay.</h2>
+    <p>Use this online form to have a hot, delicious breakfast delivered to your room....</p>
+<form>
+    <div class="solid">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname"><br>
+    <label for="Email">Room Number:</label><br>
+    <input type="text" id="Room Number" name="Room Number"><br>
+    <label for="Entree">Choose an Entree</label><br>
+    <select id="Entree" name="Entree" size="4" multiple>
+        <option value="waffels and chicken">waffels and chicken</option>
+        <option value="pancakes and syrup">pancakes and syrup</option>
+        <option value="hash browns">hash browns</option>
+        <option value="bacon and eggs">bacon and eggs</option>
+      </select><br><br>
+    </div>
+    
+    <p>What time would you like to be served?</p>
+    <select id="Servicetime" name="Servicetime" size="7" multiple>
+      <option value="6am">6am</option>
+      <option value="7am">7am</option>
+      <option value="8am">8am</option>
+      <option value="9am">9am</option>
+      <option value="10am">10am</option>
+      <option value="11am">11am</option>
+      <option value="12pm">12pm</option>
+    </select><br><br>
+    
+    <p>Would you like extra butter?</p>
+    <input type="checkbox" id="Yes" name="Yes" value="Yes">
+    <label for="Yes"> Yes</label><br>
+    <input type="checkbox" id="No" name="No" value="No">
+    <label for="No"> No</label><br>
+    <input type="checkbox" id="suprise me" name="suprise me" value="suprise me">
+    <label for="suprise me"> suprise me</label><br>
+    <input type="submit">
+</form>

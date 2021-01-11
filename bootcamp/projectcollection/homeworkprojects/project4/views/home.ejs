@@ -1,0 +1,5 @@
+<h1>Home Page</h1>
+
+<% data.people.forEach(element =>{ %>
+  <%- include('partials/card.ejs', {cardData: element}) %>
+<% }) %>

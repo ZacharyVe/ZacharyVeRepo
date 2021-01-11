@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    font-family: Roboto;
+}
+
+.navbar {
+    background: #3b5998
+    height: 90px;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: right;
+}
+
+  #logo {
+      float: left;
+      color: white;
+      text-align: center;
+      padding: 22px 60px;
+  }
+
+  .navbar a:hover {
+      background: ;
+      color: #ffd54f;
+  }
