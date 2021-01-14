@@ -13,15 +13,18 @@
     <h2>Welcome to our hotel! We hope you enjoy your stay.</h2>
     <p>Use this online form to have a hot, delicious breakfast delivered to your room....</p>
 <form>
+  Hotel Guest Contact Info
     <div class="solid">
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname"><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname"><br>
-    <label for="Email">Room Number:</label><br>
-    <input type="text" id="Room Number" name="Room Number"><br>
-    <label for="Entree">Choose an Entree</label><br>
-    <select id="Entree" name="Entree" size="4" multiple>
+      <div id="border">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname"><br><br>
+        <label for="Email">Room Number:</label><br>
+        <input type="text" id="Room Number" name="Room Number"><br><br>
+      </div>
+      <label for="Entree">Choose an Entree</label><br><br>
+      <select id="Entree" name="Entree" size="4" multiple>
         <option value="waffels and chicken">waffels and chicken</option>
         <option value="pancakes and syrup">pancakes and syrup</option>
         <option value="hash browns">hash browns</option>
@@ -29,8 +32,9 @@
       </select><br><br>
     </div>
     
-    <p>What time would you like to be served?</p>
-    <select id="Servicetime" name="Servicetime" size="7" multiple>
+    <!-- <p>What time would you like to be served?</p> -->
+    <label for="Servicetime">"What time would you like to be served?"</label>
+    <select id="Servicetime" name="Servicetime" size="1" multiple>
       <option value="6am">6am</option>
       <option value="7am">7am</option>
       <option value="8am">8am</option>
