@@ -75,31 +75,63 @@ app.get("/todos", function(req, res) {
 
 // Create data
 app.post("/todos", function(req, res) {
-  let newTodo = new TodoModel({
-      description: req.body.description
-  })
-  newTodo.save(function(error, result){
-    if(error){
-      console.log('Error: ', error)
-      mongoose.disconnect()
-    } else {
-      console.log('Saved new todo: ', result)
-      res.status(201).json(result);
-    }
-  })   
+  // get the text of the todo from body
+  // trim incoming todo description
+  let newDescription = (req.body.description).trim();
+  // if todo description is "". or undefined or null, err
+  if(!newDescription) {
+    res.status(411).json({code:123455, message: "Empty todo recieved"})
+  } else {
+    // form a query
+    let query = `INSERT INTO todos.todos
+                (description, iscomplete, user_id)
+                VALUES ('${newDescription}', false, 12)
+                RETURNING *`
+    // send the query to the database
+    console.log('query is:', query)              
+    client.query(query, function(err, todos){
+      if(err) {
+        console.log(err)
+        res.status(404).json({message: 'Error while posting'})
+      } else {
+        // add a _id property just in case our client needs it
+        todos.rows[0].id = todo.rows[0].id;
+        console.log('todos returned are:', todos.rows[0])
+        // pg returns array, we need the object within it
+        res.json(todos.rows[0]);
+      }
+    })
+  }
 });
+
+
+
+
 
 // Delete data
 app.delete("/todos/:id", (req, res) => {
-  let requestedToDoId = req.params.id;
-  console.log(requestedToDoId)
-  TodoModel.findByIdAndDelete(requestedToDoId, function(error, result){
-    if(error){
-      res.status(400).send('Id does not exist for deletion')
+  let todoId = parseInt(req.params.id);
+  let query = `
+    DELETE FROM todos.todos
+    WHERE id = ${todoID}
+  `
+  client.query(query, function(err, data){
+    if(err) {
+      console.log(err.stack)
+        res.status(404).json({code:1236,
+        message: `Error deleting todo: ${todoId}`
+      })
     } else {
-      res.status(201).send(result)
+      res.end();
     }
   })
+
+
+
+
+
+
+
 });
 
 // Update
@@ -123,5 +155,5 @@ app.put("/todos/:id", (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`Listen on port ${port}`);
+  console.log(`Listen on port ${port}`)
 });
