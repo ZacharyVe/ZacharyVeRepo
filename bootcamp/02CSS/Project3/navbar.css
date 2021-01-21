@@ -1,26 +1,66 @@
-body {
-    margin: 0;
-    font-family: Roboto;
+/*remove default styling*/ 
+* {
+  list-style-type: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/*styling text*/
+li, a, button {
+  font-family: "Oswald";
+  font-weight: 500;
+  font-size: 40;
+  text-decoration: none;
+}
+
+/* set navbar size and display style*/ 
 .navbar {
-    background: #3b5998
-    height: 90px;
-    overflow: hidden;
+    position: relative;
+    color: #ECEFF1;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.navbar a {
-    float: right;
+
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    flex-grow: 1;
+  }
+
+  /* Dropdown Button Styling*/
+.dropbtn a {
+  background-color: #01579B;
+  color: white;
+  font-size: 30px;
+  border: none;
 }
-
-  #logo {
-      float: left;
-      color: white;
-      text-align: center;
-      padding: 22px 60px;
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    text-align: center;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
   }
-
-  .navbar a:hover {
-      background: ;
-      color: #ffd54f;
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    font-size: 20px;
+    color: black;
+    padding: 1px 1px;
   }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ACE39A;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #9AD1E3;}
+ 
+ 
+ 

@@ -95,7 +95,7 @@ app.post("/todos", function(req, res) {
         res.status(404).json({message: 'Error while posting'})
       } else {
         // add a _id property just in case our client needs it
-        todos.rows[0].id = todo.rows[0].id;
+        todos.rows[0].id = todos.rows[0].id;
         console.log('todos returned are:', todos.rows[0])
         // pg returns array, we need the object within it
         res.json(todos.rows[0]);
