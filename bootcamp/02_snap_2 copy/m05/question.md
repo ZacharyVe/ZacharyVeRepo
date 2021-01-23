@@ -11,3 +11,7 @@
 Choose all correct answers. All answers needed for full credit.
 
 ## Answer:
+
+1. cached
+3. kept in browser history
+5. used with files

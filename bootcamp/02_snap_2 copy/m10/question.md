@@ -8,7 +8,7 @@
 4. db.restaurants.find({ "borough" : "Queens" })
 
 ### Answer:
-
+#skipped
 
 ### MONGODB CONNECTION:
 

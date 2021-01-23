@@ -11,3 +11,7 @@
 Pick all true statements
 
 ### Answer:
+
+1. in a child table & refers to the PK in the parent table
+2. left over after a field is deleted
+4. possibly null

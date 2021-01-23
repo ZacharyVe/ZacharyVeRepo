@@ -8,3 +8,4 @@
 
 ## Answer:
 
+4. db.collection('res').find({ "score": { $gt: 30 }});

@@ -7,3 +7,5 @@
 4. res.locals.pic
 
 ## Answer:
+
+1. req.params.pic
