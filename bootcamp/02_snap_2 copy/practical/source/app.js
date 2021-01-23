@@ -1,9 +1,12 @@
+// ejs not installed
+// not installed
 const express = require('express');
 const app = express();
+// not installed
 const fetch = require('node-fetch');
-
-const PORT = process.env.PORT || 8080
-
+// port functions
+const PORT = process.env.PORT || 8080;
+// home renders
 app.get('/', function(req, res) {
     res.render('home.ejs');
 });
@@ -24,5 +27,6 @@ app.get('/results', function(req, res) {
 });
 
 app.listen(PORT, function() {
-    console.log("Star Wars backend running on port 3000");
+    // wrong port was listed
+    console.log("Star Wars backend running on port 8080");
 });
