@@ -1,0 +1,24 @@
+#app {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.name {
+  font-size: 3em;
+  margin: .25em;
+}
+
+.theImage {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0b3982;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 4px solid #18dbdb;
+  color: #26d371;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
