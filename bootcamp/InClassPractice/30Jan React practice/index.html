@@ -1,4 +1,4 @@
-/<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -20,33 +20,68 @@
       class FeelingsList extends React.Component {
         render() {
           const theStyles = {fontSize: "24px"};
+          console.log(theStyles);
           return (
-            <ul style="{theStyles}">
-               <li>Happy</li>
-               <li>Sad</li>
-            </ul>
-          )
+            <div>
+              <ul style="{theStyles}">
+                <li>Happy</li>
+                <li>Sad</li>
+                <li>Wanted to accomplish somthing</li>
+              </ul>
+            </div>
+          );
         }
       };
-
-      class Garfield extends React.Component {
+  
+      class CharacterImage extends React.Component {
         render() {
           return (
             <div className="theImage">
               <h1 className="name">Life</h1>
-              <img src="data:image/jpeg;base64,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"></img>
+              <img src="https://miro.medium.com/max/1050/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"></img>
               <h3>How does he feel?</h3>
               <FeelingsList />
             </div>
-          )
+          );
         }
       };
-    ReactDOM.render(<Garfield />, document.getElementById("app"));
+    ReactDOM.render(<CharacterImage />, document.getElementById("app"));
 
   </script>
+
+    <div id="output"></div>
+    <script type="text/babel">
+      const getMessage = () => "Hello World";
+      document.getElementById('output').innerHTML = getMessage();
+  </script>
+
+
+    <div id="app1"></div>
+    <script type="text/babel">
+      class RandomBox extends React.Component {
+        render() {
+          const fontSize = Math.floor((Math.random() * 80)) + 20;
+          const backgroundColor = ['red', 'green', 'blue', 'black']
+            [Math.floor(Math.random() * 4)];
+
+          return(
+            <div style = {{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            backgroundColor: backgroundColor,
+                            fontSize: `${fontSize}px`,
+                            height: '200px',
+                            width: '500px',
+                            color: 'white'
+            }}>
+              RANDOM BOX
+            </div>
+          );
+        }
+      };
+  ReactDOM.render(<RandomBox />, document.getElementById("app1"));
+  </script>
+
   </body>
 </html>
-
-<!-- weekend assignment
-const fontSize = Math.floor((Math.random() * 80)) + 20;
-const backgroundColor = ['red', 'green', 'blue', 'black'][Math.floor(Math.random() * 4)] -->
