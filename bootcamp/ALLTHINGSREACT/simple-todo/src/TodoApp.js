@@ -57,7 +57,7 @@ class TodoApp extends Component {
             <button type="submit" className="save-button">SAVE</button>
           </form>
 
-          <div className="todo-content">
+          <div id="content" className="todo-content">
             <ol>
               {todosList}
             </ol>
